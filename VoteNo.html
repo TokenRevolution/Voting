@@ -1,15 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
     <title>Voting</title>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
-  <button class="enableEthereumButton btn">Enable Ethereum</button>
-  <button class="sendEthButton btn">Send Eth</button>
-  <button class="showAccount">Show account</button>
-  <lable id="VoteYes">Ramarro</lable>
+  <button class="enableEthereumButton btn" style="
+    width: 50%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-size: 40px;
+">Show NO</button>
+  <button class="sendEthButton btn" style="
+    display: none;
+">Send Eth</button>
+  <button class="showAccount" style="
+    display: none;
+">0x91ed1ea33bcb8669a31616dca576148829566145</button>
+  <lable id="VoteYes" style="
+    font-size: 40px;
+">47.56458960844623</lable>
     <script>
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const sendEthButton = document.querySelector('.sendEthButton');
@@ -64,5 +75,6 @@ await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddre
   });
       } 
     </script>
-  </body>
-</html>
+  
+
+</body></html>
