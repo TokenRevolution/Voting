@@ -1,15 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
     <title>Voting</title>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
-  <body>
-  <button class="enableEthereumButton btn">Enable Ethereum</button>
-  <button class="sendEthButton btn" style:"Display: none;">Send Eth</button>
-  <button class="showAccount">Show account</button>
-  <lable id="VoteYes">Ramarro</lable>
+  <body style="
+    background: url(https://banner2.cleanpng.com/20190516/wwi/kisspng-ballot-box-clip-art-voting-election-5-th-ward-alderman-chicago-center-for-illinois-5cde0a2ce84677.0626415015580554689514.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+">
+  <button class="enableEthereumButton btn" style="
+    width: 50%;
+    margin-right: 5%;
+    margin-top: 40%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-size: 40px;
+    background: lightblue;
+    border-radius: 20px;
+    box-shadow: 5px 5px;
+    height: 20%;
+">Show NO</button>
+  <button class="sendEthButton btn" style="
+    display: none;
+">Send Eth</button>
+  <button class="showAccount" style="
+    display: none;
+">0x91ed1ea33bcb8669a31616dca576148829566145</button>
+  <lable id="VoteYes" style="
+    font-size: 40px;
+    background: rgb(0 180 229 / 70%);
+    padding: 3%;
+    border-radius: 20%;
+    box-shadow: 5px 5px 5px 5px;
+">47.56458960844623</lable>
     <script>
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const sendEthButton = document.querySelector('.sendEthButton');
@@ -53,7 +76,7 @@ async function getAccount() {
 async function handleNewAccounts(newAccounts)
       {    
 var SMART_CHAIN = "https://api.bscscan.com/api";
-var ADDRESS_FOR_GET_BALANCE = "0x645678db11ca50dc86b980b5cdbcd74c43e499bd";
+var ADDRESS_FOR_GET_BALANCE = "0x4ae018BBF00fB79DAF316dAcaeD538fe333AC825";
 var CONNECTED_ADDRESS = newAccounts;
 var APIKEY = "XHQ5VW16JQQBUESG69IBVACI83KEDAAMC2";
 var DECIMALS_OF_CHOSED_TOKEN = 1e-18;
@@ -64,5 +87,6 @@ await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddre
   });
       } 
     </script>
-  </body>
-</html>
+  
+
+</body></html>
