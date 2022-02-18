@@ -3,14 +3,22 @@
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
-  <body>
+  <body style="
+    background: url(https://banner2.cleanpng.com/20190516/wwi/kisspng-ballot-box-clip-art-voting-election-5-th-ward-alderman-chicago-center-for-illinois-5cde0a2ce84677.0626415015580554689514.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+">
   <button class="enableEthereumButton btn" style="
     width: 50%;
     margin-right: 5%;
-    margin-top: 5%;
+    margin-top: 40%;
     margin-left: 5%;
     margin-bottom: 5%;
     font-size: 40px;
+    background: lightblue;
+    border-radius: 20px;
+    box-shadow: 5px 5px;
+    height: 20%;
 ">Show NO</button>
   <button class="sendEthButton btn" style="
     display: none;
@@ -20,6 +28,10 @@
 ">0x91ed1ea33bcb8669a31616dca576148829566145</button>
   <lable id="VoteYes" style="
     font-size: 40px;
+    background: rgb(0 180 229 / 70%);
+    padding: 3%;
+    border-radius: 20%;
+    box-shadow: 5px 5px 5px 5px;
 ">47.56458960844623</lable>
     <script>
 const ethereumButton = document.querySelector('.enableEthereumButton');
