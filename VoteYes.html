@@ -80,7 +80,12 @@ var ADDRESS_FOR_GET_BALANCE = "0x645678db11ca50dc86b980b5cdbcd74c43e499bd";
 var CONNECTED_ADDRESS = newAccounts;
 var APIKEY = "XHQ5VW16JQQBUESG69IBVACI83KEDAAMC2";
 var DECIMALS_OF_CHOSED_TOKEN = 1e-18;
-await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddress='+ADDRESS_FOR_GET_BALANCE+'&address='+CONNECTED_ADDRESS+'&tag=latest&apikey='+APIKEY, function (data) {
+          
+          alert(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddress='
++ADDRESS_FOR_GET_BALANCE+'&address='+CONNECTED_ADDRESS+'&tag=latest&apikey='+APIKEY);
+          
+await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddress='
++ADDRESS_FOR_GET_BALANCE+'&address='+CONNECTED_ADDRESS+'&tag=latest&apikey='+APIKEY, function (data) {
     let BALANCE = data['result'] * DECIMALS_OF_CHOSED_TOKEN;
 
   document.getElementById('VoteYes').innerHTML = BALANCE;
